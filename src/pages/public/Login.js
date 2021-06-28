@@ -1,9 +1,8 @@
 import React, { useState } from "react";
+import { gql, useMutation } from "@apollo/client";
 import { Button, Form } from "semantic-ui-react";
-import { useMutation } from "@apollo/react-hooks";
-import gql from "graphql-tag";
 
-import { useForm } from "../util/hooks";
+import { useForm } from "../../util/hooks";
 
 function Login(props) {
   const [errors, setErrors] = useState({});
@@ -33,7 +32,7 @@ function Login(props) {
         <h1>Login</h1>
         <Form.Input
           label="Username"
-          placeholder="Username.."
+          placeholder="Username..."
           name="username"
           type="text"
           value={values.username}
@@ -42,7 +41,7 @@ function Login(props) {
         />
         <Form.Input
           label="Password"
-          placeholder="Password.."
+          placeholder="Password..."
           name="password"
           type="password"
           value={values.password}

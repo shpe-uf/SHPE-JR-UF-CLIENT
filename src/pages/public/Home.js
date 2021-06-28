@@ -2,7 +2,7 @@ import React from "react";
 import { gql, useQuery } from "@apollo/client";
 
 function Home() {
-  const { loading, data } = useQuery(FETCH_USERS_QUERY);
+  const { data } = useQuery(FETCH_USERS_QUERY);
 
   if (data) {
     console.log(data.getUsers);
