@@ -32,6 +32,13 @@ function MenuBar() {
         as={Link}
         to="/"
       />
+      <Menu.Item
+      name="profile"
+      active={activeItem === "profile"}
+      onClick={handleItemClick}
+      as={Link}
+      to="/profile"
+    />
       <Menu.Menu position="right">
         <Menu.Item
           name="login"
